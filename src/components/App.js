@@ -23,7 +23,7 @@ const relations = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enem
 export const App = ()=>{
     const [name1, setName1] = useState('');
     const [name2, setName2] = useState('');
-    const [relation, setRelation] = useState('');
+    const [relation, setRelation] = useState('Relation');
     
 
     const calculate = () => {
@@ -57,7 +57,7 @@ export const App = ()=>{
                 data-testid='clear'
                 onClick={clear}
                 >Clear</button>
-            {relation && <h3>{relation}</h3>}
+            {<h3>{relation}</h3>}
         </div>
     )
 };
