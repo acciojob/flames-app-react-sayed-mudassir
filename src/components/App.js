@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './styles/FlamesApp.css'
 export const App = ()=>{
     const [name1, setName1] = useState('');
     const [name2, setName2] = useState('');
@@ -34,11 +33,23 @@ export const App = ()=>{
     };
 
     return (
-        <div>
-            <input value={name1} onChange={(e)=>{setName1(e.target.value)}}/>
-            <input value={name2} onChange={(e)=>{setName2(e.target.value)}}/>
-            <button onClick={calculate}> calculate Relationsip future</button>
-            <button onClick={clear}>Clear</button>
+        <div id="main">
+            <input 
+                value={name1} 
+                onChange={(e)=>{setName1(e.target.value)}}
+                placeholder='Enter first name'
+                data-testid='input1'/>
+            <input 
+                value={name2} 
+                onChange={(e)=>{setName2(e.target.value)}}
+                placeholder='enter second name'
+                data-testid='input2'/>
+            <button 
+                onClick={calculate}
+                > calculate Relationsip future</button>
+            <button 
+                onClick={clear}
+                >Clear</button>
             {relation && <h3>{relation}</h3>}
         </div>
     )
