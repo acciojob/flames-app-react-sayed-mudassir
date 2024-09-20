@@ -57,7 +57,7 @@ export const App = ()=>{
                 data-testid='clear'
                 onClick={clear}
                 >Clear</button>
-            {<h3>{relation}</h3>}
+            {relation && <h3>{relation}</h3>}
         </div>
     )
 };
