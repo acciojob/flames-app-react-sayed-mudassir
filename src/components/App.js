@@ -23,7 +23,7 @@ const relations = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enem
 export const App = ()=>{
     const [name1, setName1] = useState('');
     const [name2, setName2] = useState('');
-    const [relation, setRelation] = useState('Relation');
+    const [relation, setRelation] = useState('answer');
     
 
     const calculate = () => {
