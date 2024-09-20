@@ -41,19 +41,23 @@ export const App = ()=>{
                 value={name1} 
                 onChange={(e)=>{setName1(e.target.value)}}
                 placeholder='Enter first name'
-                data-testid='input1'/>
+                data-testid='input1'
+                name='name1'/>
             <input 
                 value={name2} 
                 onChange={(e)=>{setName2(e.target.value)}}
                 placeholder='enter second name'
-                data-testid='input2'/>
-            <button 
+                data-testid='input2'
+                name='name2'/>
+            <button
+                data-testid='calculate_relationship' 
                 onClick={calculate}
-                > calculate Relationsip future</button>
+                > Calculate Relationsip Future</button>
             <button 
+                data-testid='clear'
                 onClick={clear}
                 >Clear</button>
-            {relation && <h3>{relation}</h3>}
+            {<h3>{relation}</h3>}
         </div>
     )
 };
