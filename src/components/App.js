@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-export const App = ()=>{
-    const [name1, setName1] = useState('');
-    const [name2, setName2] = useState('');
-    const [relation, setRelation] = useState('');
-    const relations = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enemy"];
+
+const relations = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enemy"];
     function getRelation(name1,name2){
         let map = {};
         let n = name1.length, m = name2.length;
@@ -22,6 +19,12 @@ export const App = ()=>{
         }
         return relations[(n + m - 2 * common)%6];
     }
+
+export const App = ()=>{
+    const [name1, setName1] = useState('');
+    const [name2, setName2] = useState('');
+    const [relation, setRelation] = useState('');
+    
 
     const calculate = () => {
         setRelation(getRelation(name1,name2));
